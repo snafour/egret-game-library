@@ -19,7 +19,7 @@ module tiled{
 
 		private _initialized: boolean;
 
-		private _properties: Array<tiled.TMXProperty>;
+		public _properties: any;
 		private _layers: Array<any>;
 		private _tilesets: tiled.TMXTilesetGroup;
 		private _tmxRenderer: tiled.TMXRenderer = null;
@@ -180,17 +180,17 @@ module tiled{
 		 * @param data 属性数据
 		 * @version egret 3.0.3
 		 */
-		parseProperties(data: any): Array<tiled.TMXProperty> {
-			var properties: Array<tiled.TMXProperty>;
+		parseProperties(data: any): any {
+			var properties:any;
 			var children: Array<any>                        = data.children;
 			if (children) {
-				properties                                  = [];
+				properties                                  = {};
 				for (var i: number = 0; i < children.length; i++) {
 					var child: any                          = children[i];
 					var tmxProperty: tiled.TMXProperty      = new tiled.TMXProperty();
 					tmxProperty.name                        = child.attributes.name;
 					tmxProperty.value                       = child.attributes.value;
-					properties[i]                           = tmxProperty;
+					properties[tmxProperty.name]            = tmxProperty;
 				}
 			}
 			return properties;
