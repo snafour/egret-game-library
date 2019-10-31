@@ -305,8 +305,8 @@ module tiled{
 			{
 				_spritesheet = spritesheets[tile.gid - this.firstgid];
 				var rect:egret.Rectangle = new egret.Rectangle(
-					0 * (this.tilewidth + this._spacing) + this._spacing,
-					0 * (this.tileheight + this._margin) + this._margin,
+					0 * (this.tilewidth + this._spacing) + this._margin,
+					0 * (this.tileheight + this._spacing) + this._margin,
 					this.tilewidth,
 					this.tileheight);
 			}	
@@ -314,8 +314,8 @@ module tiled{
 			{
 				_spritesheet = spritesheets[0];
 				var rect:egret.Rectangle = new egret.Rectangle(
-					(id % this.horizontalTileCount) * (this.tilewidth + this._spacing) + this._spacing,
-					(Math.floor(id / this.horizontalTileCount)) * (this.tileheight + this._margin) + this._margin,
+					(id % this.horizontalTileCount) * (this.tilewidth + this._spacing) + this._margin,
+					(Math.floor(id / this.horizontalTileCount)) * (this.tileheight + this._spacing) + this._margin,
 					this.tilewidth,
 					this.tileheight);
 			}	
