@@ -12,7 +12,7 @@ module tiled{
 		private _vTileCount: number;
 		private _tilemap: tiled.TMXTilemap;
 		private _tileDatas: Array<any>;
-		public _properties: Array<any>;
+		public _properties: any;
 		private _image: tiled.TMXImage;
 		private _images: tiled.TMXImage[];
 		private _imagesource: string;
@@ -238,7 +238,7 @@ module tiled{
          *  获取tileset属性列表
          * @version Egret 3.0.3
          */
-        getProperties(): tiled.TMXProperty[]
+        getProperties(): any
 		{
 		    return this._properties;
 		}
@@ -250,7 +250,7 @@ module tiled{
 		 */
 		getPropertyByIndex(index:number)
 		{
-            if(this._properties && index < this._properties.length)
+            if(this._properties)
                 return this._properties[index];
             return null;
 		}
