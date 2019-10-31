@@ -288,7 +288,7 @@ declare module tiled {
         private _opacity;
         private _source;
         private _transColor;
-        private _properties;
+        public _properties;
         private _bitmap;
         private _sourcebitmap;
         private _texture;
@@ -343,7 +343,7 @@ declare module tiled {
         private _staggerindex;
         private _opacity;
         private renderer;
-        private _properties;
+        public _properties;
         private _staticContainer;
         private _animationContainer;
         layerData: Array<Array<tiled.TMXTile>>;
@@ -505,7 +505,7 @@ declare module tiled {
         private _staggerindex;
         private _backgroundcolor;
         private _initialized;
-        private _properties;
+        public _properties;
         private _layers;
         private _tilesets;
         private _tmxRenderer;
@@ -578,7 +578,7 @@ declare module tiled {
          * @param data 属性数据
          * @version egret 3.0.3
          */
-        parseProperties(data: any): Array<tiled.TMXProperty>;
+        parseProperties(data: any): any;
         /**
          * 是否显示背景
          * @param isShow
@@ -699,7 +699,7 @@ declare module tiled {
         private _flippedY;
         private _flippedAD;
         private _flipped;
-        private _properties;
+        public _properties;
         /**
          * 创建一个Tile对象实例
          * @param data 数据
@@ -1201,7 +1201,7 @@ declare module tiled {
         private _tilemap;
         private _image;
         private _animation;
-        private _properties;
+        public _properties;
         private _objectGroups;
         bitmap: egret.Bitmap;
         /**
@@ -1282,7 +1282,7 @@ declare module tiled {
         private _vTileCount;
         private _tilemap;
         private _tileDatas;
-        private _properties;
+        public _properties;
         private _image;
         private _images;
         private _imagesource;
@@ -1390,7 +1390,7 @@ declare module tiled {
          *  获取tileset属性列表
          * @version Egret 3.0.3
          */
-        getProperties(): tiled.TMXProperty[];
+        getProperties():any;
         /**
          * 根据索引获取tileset属性列表
          * @param index
