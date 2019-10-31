@@ -13,7 +13,7 @@ module tiled{
 		private _staggerindex: number;
 		private _opacity: number;
 		private renderer: tiled.TMXRenderer;
-		public _properties: Array<tiled.TMXProperty>;
+		public _properties:any;
 		
 		private _staticContainer:egret.Sprite;
 		private _animationContainer:egret.Sprite;
