@@ -361,7 +361,7 @@ module tiled{
             for (var url in this.spritesheets){
                 var spritesheet: egret.SpriteSheet = this.spritesheets[url];
 				//销毁图像不能显示
-                //spritesheet.dispose();
+                spritesheet.dispose();
             }
 			this.spritesheets = {};
 		}
