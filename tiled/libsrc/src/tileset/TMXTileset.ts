@@ -12,7 +12,7 @@ module tiled{
 		private _vTileCount: number;
 		private _tilemap: tiled.TMXTilemap;
 		private _tileDatas: Array<any>;
-		private _properties: Array<any>;
+		public _properties: Array<any>;
 		private _image: tiled.TMXImage;
 		private _images: tiled.TMXImage[];
 		private _imagesource: string;
