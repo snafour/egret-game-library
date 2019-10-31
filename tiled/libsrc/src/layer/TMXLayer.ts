@@ -13,7 +13,7 @@ module tiled{
 		private _staggerindex: number;
 		private _opacity: number;
 		private renderer: tiled.TMXRenderer;
-		private _properties: Array<tiled.TMXProperty>;
+		public _properties: Array<tiled.TMXProperty>;
 		
 		private _staticContainer:egret.Sprite;
 		private _animationContainer:egret.Sprite;
@@ -43,9 +43,9 @@ module tiled{
 			//
 			this.addChild(this._staticContainer);
 			//为了防止地图坐标为负时出现无法显示的问题，这里延迟2秒进行缓存
-			setTimeout(()=>{
+			//setTimeout(()=>{
 				this._staticContainer.cacheAsBitmap = true;
-			},2000)
+			//},2000)
 			
 			this._animationContainer            = new egret.Sprite();
 			this.addChild(this._animationContainer);
