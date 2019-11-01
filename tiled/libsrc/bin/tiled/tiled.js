@@ -1,12 +1,12 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
-var __extends = this && this.__extends || function __extends(t, e) { 
- function r() { 
- this.constructor = t;
-}
-for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
-r.prototype = e.prototype, t.prototype = new r();
+var __extends = this && this.__extends || function __extends(t, e) {
+    function r() {
+        this.constructor = t;
+    }
+    for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
+    r.prototype = e.prototype, t.prototype = new r();
 };
 var tiled;
 (function (tiled) {
@@ -56,7 +56,7 @@ var tiled;
         TMXLayerBase.prototype.draw = function (rect) {
         };
         return TMXLayerBase;
-    }(egret.Sprite));
+    } (egret.Sprite));
     tiled.TMXLayerBase = TMXLayerBase;
     __reflect(TMXLayerBase.prototype, "tiled.TMXLayerBase", ["tiled.ILayer"]);
 })(tiled || (tiled = {}));
@@ -136,7 +136,7 @@ var tiled;
             }
         };
         return TMXRenderer;
-    }());
+    } ());
     tiled.TMXRenderer = TMXRenderer;
     __reflect(TMXRenderer.prototype, "tiled.TMXRenderer");
 })(tiled || (tiled = {}));
@@ -154,7 +154,7 @@ var tiled;
             this.gid = 0;
         }
         return TMXProperty;
-    }());
+    } ());
     tiled.TMXProperty = TMXProperty;
     __reflect(TMXProperty.prototype, "tiled.TMXProperty");
 })(tiled || (tiled = {}));
@@ -288,7 +288,7 @@ var tiled;
          */
         TMXConstants.ORIENTATION_HEXAGONAL = "hexagonal";
         return TMXConstants;
-    }());
+    } ());
     tiled.TMXConstants = TMXConstants;
     __reflect(TMXConstants.prototype, "tiled.TMXConstants");
 })(tiled || (tiled = {}));
@@ -323,7 +323,7 @@ var tiled;
          */
         TMXImageLoadEvent.ALL_IMAGE_COMPLETE = "allComplete";
         return TMXImageLoadEvent;
-    }(egret.Event));
+    } (egret.Event));
     tiled.TMXImageLoadEvent = TMXImageLoadEvent;
     __reflect(TMXImageLoadEvent.prototype, "tiled.TMXImageLoadEvent");
 })(tiled || (tiled = {}));
@@ -349,7 +349,7 @@ var tiled;
             return _this;
         }
         return TMXColorLayer;
-    }(egret.Sprite));
+    } (egret.Sprite));
     tiled.TMXColorLayer = TMXColorLayer;
     __reflect(TMXColorLayer.prototype, "tiled.TMXColorLayer");
 })(tiled || (tiled = {}));
@@ -465,7 +465,7 @@ var tiled;
             this.addChild(this._bitmap);
         };
         return TMXImageLayer;
-    }(tiled.TMXLayerBase));
+    } (tiled.TMXLayerBase));
     tiled.TMXImageLayer = TMXImageLayer;
     __reflect(TMXImageLayer.prototype, "tiled.TMXImageLayer");
 })(tiled || (tiled = {}));
@@ -493,9 +493,9 @@ var tiled;
             //
             _this.addChild(_this._staticContainer);
             //为了防止地图坐标为负时出现无法显示的问题，这里延迟2秒进行缓存
-            setTimeout(function () {
-                _this._staticContainer.cacheAsBitmap = true;
-            }, 2000);
+          //  setTimeout(function (self) {
+            _this._staticContainer.cacheAsBitmap = true;
+          //  }, 2000, _this);
             _this._animationContainer = new egret.Sprite();
             _this.addChild(_this._animationContainer);
             _this._tilemap = tilemap;
@@ -798,7 +798,7 @@ var tiled;
             }
         };
         return TMXLayer;
-    }(tiled.TMXLayerBase));
+    } (tiled.TMXLayerBase));
     tiled.TMXLayer = TMXLayer;
     __reflect(TMXLayer.prototype, "tiled.TMXLayer");
 })(tiled || (tiled = {}));
@@ -979,13 +979,13 @@ var tiled;
             var properties;
             var children = data.children;
             if (children) {
-                properties = [];
+                properties = {};
                 for (var i = 0; i < children.length; i++) {
                     var child = children[i];
                     var tmxProperty = new tiled.TMXProperty();
                     tmxProperty.name = child.attributes.name;
                     tmxProperty.value = child.attributes.value;
-                    properties[i] = tmxProperty;
+                    properties[tmxProperty.name] = tmxProperty;
                 }
             }
             return properties;
@@ -1162,7 +1162,7 @@ var tiled;
             return imageLayer;
         };
         return TMXTilemap;
-    }(egret.Sprite));
+    } (egret.Sprite));
     tiled.TMXTilemap = TMXTilemap;
     __reflect(TMXTilemap.prototype, "tiled.TMXTilemap");
 })(tiled || (tiled = {}));
@@ -1261,7 +1261,7 @@ var tiled;
             }, this, RES.ResourceItem.TYPE_IMAGE);
         };
         return TMXImage;
-    }(egret.EventDispatcher));
+    } (egret.EventDispatcher));
     tiled.TMXImage = TMXImage;
     __reflect(TMXImage.prototype, "tiled.TMXImage");
 })(tiled || (tiled = {}));
@@ -1520,7 +1520,7 @@ var tiled;
             }
         };
         return TMXObject;
-    }(egret.Sprite));
+    } (egret.Sprite));
     tiled.TMXObject = TMXObject;
     __reflect(TMXObject.prototype, "tiled.TMXObject");
 })(tiled || (tiled = {}));
@@ -1641,7 +1641,7 @@ var tiled;
                 object.parent.removeChild(object);
         };
         return TMXObjectGroup;
-    }(egret.Sprite));
+    } (egret.Sprite));
     tiled.TMXObjectGroup = TMXObjectGroup;
     __reflect(TMXObjectGroup.prototype, "tiled.TMXObjectGroup");
 })(tiled || (tiled = {}));
@@ -1708,7 +1708,7 @@ var tiled;
             configurable: true
         });
         return TMXAnimation;
-    }());
+    } ());
     tiled.TMXAnimation = TMXAnimation;
     __reflect(TMXAnimation.prototype, "tiled.TMXAnimation");
 })(tiled || (tiled = {}));
@@ -1915,7 +1915,7 @@ var tiled;
             }
         };
         return TMXHexagonalRenderer;
-    }(tiled.TMXRenderer));
+    } (tiled.TMXRenderer));
     tiled.TMXHexagonalRenderer = TMXHexagonalRenderer;
     __reflect(TMXHexagonalRenderer.prototype, "tiled.TMXHexagonalRenderer");
 })(tiled || (tiled = {}));
@@ -2066,7 +2066,7 @@ var tiled;
             }
         };
         return TMXIsometricRenderer;
-    }(tiled.TMXRenderer));
+    } (tiled.TMXRenderer));
     tiled.TMXIsometricRenderer = TMXIsometricRenderer;
     __reflect(TMXIsometricRenderer.prototype, "tiled.TMXIsometricRenderer");
 })(tiled || (tiled = {}));
@@ -2164,7 +2164,7 @@ var tiled;
             }
         };
         return TMXOrthogonalRenderer;
-    }(tiled.TMXRenderer));
+    } (tiled.TMXRenderer));
     tiled.TMXOrthogonalRenderer = TMXOrthogonalRenderer;
     __reflect(TMXOrthogonalRenderer.prototype, "tiled.TMXOrthogonalRenderer");
 })(tiled || (tiled = {}));
@@ -2220,7 +2220,7 @@ var tiled;
             configurable: true
         });
         return TMXAnimationFrame;
-    }());
+    } ());
     tiled.TMXAnimationFrame = TMXAnimationFrame;
     __reflect(TMXAnimationFrame.prototype, "tiled.TMXAnimationFrame");
 })(tiled || (tiled = {}));
@@ -2257,7 +2257,7 @@ var tiled;
             this.graphics.endFill();
         };
         return Ellipse;
-    }(egret.Sprite));
+    } (egret.Sprite));
     tiled.Ellipse = Ellipse;
     __reflect(Ellipse.prototype, "tiled.Ellipse");
 })(tiled || (tiled = {}));
@@ -2300,7 +2300,7 @@ var tiled;
             this.graphics.endFill();
         };
         return Polygon;
-    }(egret.Sprite));
+    } (egret.Sprite));
     tiled.Polygon = Polygon;
     __reflect(Polygon.prototype, "tiled.Polygon");
 })(tiled || (tiled = {}));
@@ -2343,7 +2343,7 @@ var tiled;
             this.graphics.endFill();
         };
         return PolyLine;
-    }(egret.Sprite));
+    } (egret.Sprite));
     tiled.PolyLine = PolyLine;
     __reflect(PolyLine.prototype, "tiled.PolyLine");
 })(tiled || (tiled = {}));
@@ -2517,7 +2517,7 @@ var tiled;
             configurable: true
         });
         return TMXTile;
-    }(egret.Sprite));
+    } (egret.Sprite));
     tiled.TMXTile = TMXTile;
     __reflect(TMXTile.prototype, "tiled.TMXTile");
 })(tiled || (tiled = {}));
@@ -2781,7 +2781,7 @@ var tiled;
          * @version Egret 3.0.3
          */
         TMXTileset.prototype.getPropertyByIndex = function (index) {
-            if (this._properties && index < this._properties.length)
+            if (this._properties)
                 return this._properties[index];
             return null;
         };
@@ -2832,11 +2832,11 @@ var tiled;
             var _spritesheet;
             if (this.images.length > 1) {
                 _spritesheet = spritesheets[tile.gid - this.firstgid];
-                var rect = new egret.Rectangle(0 * (this.tilewidth + this._spacing) + this._spacing, 0 * (this.tileheight + this._margin) + this._margin, this.tilewidth, this.tileheight);
+                var rect = new egret.Rectangle(0 * (this.tilewidth + this._spacing) + this._margin, 0 * (this.tileheight + this._spacing) + this._margin, this.tilewidth, this.tileheight);
             }
             else {
                 _spritesheet = spritesheets[0];
-                var rect = new egret.Rectangle((id % this.horizontalTileCount) * (this.tilewidth + this._spacing) + this._spacing, (Math.floor(id / this.horizontalTileCount)) * (this.tileheight + this._margin) + this._margin, this.tilewidth, this.tileheight);
+                var rect = new egret.Rectangle((id % this.horizontalTileCount) * (this.tilewidth + this._spacing) + this._margin, (Math.floor(id / this.horizontalTileCount)) * (this.tileheight + this._spacing) + this._margin, this.tilewidth, this.tileheight);
             }
             renderTexture = _spritesheet.createTexture(key, rect.x, rect.y, rect.width, rect.height, 0, 0);
             var isImage = false;
@@ -2885,7 +2885,7 @@ var tiled;
         };
         TMXTileset.spritesheets = {};
         return TMXTileset;
-    }());
+    } ());
     tiled.TMXTileset = TMXTileset;
     __reflect(TMXTileset.prototype, "tiled.TMXTileset");
 })(tiled || (tiled = {}));
@@ -2979,7 +2979,7 @@ var tiled;
                 throw new Error("no matching tileset found for gid " + gid);
         };
         return TMXTilesetGroup;
-    }());
+    } ());
     tiled.TMXTilesetGroup = TMXTilesetGroup;
     __reflect(TMXTilesetGroup.prototype, "tiled.TMXTilesetGroup");
 })(tiled || (tiled = {}));
@@ -3110,7 +3110,7 @@ var tiled;
         };
         Base64._keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
         return Base64;
-    }());
+    } ());
     tiled.Base64 = Base64;
     __reflect(Base64.prototype, "tiled.Base64");
 })(tiled || (tiled = {}));
@@ -3187,7 +3187,7 @@ var tiled;
             return parseInt(colorStr, 16);
         };
         return TMXUtils;
-    }());
+    } ());
     tiled.TMXUtils = TMXUtils;
     __reflect(TMXUtils.prototype, "tiled.TMXUtils");
 })(tiled || (tiled = {}));

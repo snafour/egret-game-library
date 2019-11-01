@@ -288,7 +288,7 @@ declare module tiled {
         private _opacity;
         private _source;
         private _transColor;
-        public _properties;
+         _properties;
         private _bitmap;
         private _sourcebitmap;
         private _texture;
@@ -343,7 +343,7 @@ declare module tiled {
         private _staggerindex;
         private _opacity;
         private renderer;
-        public _properties;
+         _properties;
         private _staticContainer;
         private _animationContainer;
         layerData: Array<Array<tiled.TMXTile>>;
@@ -505,7 +505,7 @@ declare module tiled {
         private _staggerindex;
         private _backgroundcolor;
         private _initialized;
-        public _properties;
+         _properties;
         private _layers;
         private _tilesets;
         private _tmxRenderer;
@@ -699,7 +699,7 @@ declare module tiled {
         private _flippedY;
         private _flippedAD;
         private _flipped;
-        public _properties;
+         _properties;
         /**
          * 创建一个Tile对象实例
          * @param data 数据
@@ -1201,7 +1201,7 @@ declare module tiled {
         private _tilemap;
         private _image;
         private _animation;
-        public _properties;
+         _properties;
         private _objectGroups;
         bitmap: egret.Bitmap;
         /**
@@ -1282,7 +1282,7 @@ declare module tiled {
         private _vTileCount;
         private _tilemap;
         private _tileDatas;
-        public _properties;
+         _properties;
         private _image;
         private _images;
         private _imagesource;
@@ -1390,7 +1390,7 @@ declare module tiled {
          *  获取tileset属性列表
          * @version Egret 3.0.3
          */
-        getProperties():any;
+        getProperties(): any;
         /**
          * 根据索引获取tileset属性列表
          * @param index

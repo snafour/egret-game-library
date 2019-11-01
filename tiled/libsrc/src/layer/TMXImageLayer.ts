@@ -6,7 +6,7 @@ module tiled{
 		private _opacity: number;
 		private _source: string;
 		private _transColor: string;
-		private _properties: Array<tiled.TMXProperty>;
+		 _properties: any;
 		private _bitmap: egret.Bitmap;
 		private _sourcebitmap: egret.Bitmap;
 		private _texture:egret.Texture;

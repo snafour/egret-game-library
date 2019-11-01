@@ -29,7 +29,7 @@ module tiled{
 		private _flippedAD: boolean;
 		private _flipped: boolean;
 
-		public _properties:any;
+		 _properties: any;
 		
 		/**
 		 * 创建一个Tile对象实例

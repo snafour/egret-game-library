@@ -15,7 +15,7 @@ module tiled{
 		
 		private _image: tiled.TMXImage;
 		private _animation: tiled.TMXAnimation;
-        public _properties: any;
+         _properties: any;
         private _objectGroups: tiled.TMXObjectGroup[];
 
 		bitmap: egret.Bitmap;
